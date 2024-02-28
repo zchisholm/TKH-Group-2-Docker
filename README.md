@@ -1,4 +1,5 @@
 # TKH-Group-2-Docker
+Authors: Zedd Chisholm,
 **HOW TO DOWNLOAD AND INSTALL DOCKER ON WINDOWS**
 I. Complete Documentation of Download, Installation, and Configuration
 
@@ -62,7 +63,7 @@ To run Docker commands without sudo:
     '''
 
     2. Log out and log back in for the group changes to take effect.
-    
+
 ### E. Pulling Container Images
 Accessing Docker Hub from the command line.
 Pulling images for CentOS, Ubuntu Desktop/Server, and Kali.
