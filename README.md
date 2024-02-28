@@ -39,7 +39,7 @@ To ensure Docker runs automatically at system startup:
 - **For Windows:**
   Similar to Windows, Docker Desktop will automatically start. This can be adjusted in the Docker Desktop's Preferences.
 
-#### Adjusting Docker's resource allocation (optional).
+#### Adjusting Docker's resource allocation (optional)
 - **Docker Desktop:**
   Go to Settings (or Preferences on macOS) > Resources to adjust CPUs, Memory, Swap, and Disk Image size as per your requirement.
 
@@ -54,22 +54,43 @@ To ensure Docker runs automatically at system startup:
   }
   '''
 
-#### Configuring Docker for use without sudo (Linux specific).
+#### Configuring Docker for use without sudo (Linux specific)
 To run Docker commands without sudo:
 
-    1. Add your user to the docker group:
-    '''
-    sudo usermod -aG docker $USER
-    '''
+1. Add your user to the docker group:
+'''
+sudo usermod -aG docker $USER
+'''
 
-    2. Log out and log back in for the group changes to take effect.
+2. Log out and log back in for the group changes to take effect.
 
 ### E. Pulling Container Images
-Accessing Docker Hub from the command line.
-Pulling images for CentOS, Ubuntu Desktop/Server, and Kali.
-Commands for pulling each specific image.
-Verifying the images are pulled successfully.
-Listing available Docker images.
+#### Accessing Docker Hub from the command line
+Ensure you have an active internet connection and Docker is running. Use the docker search command to find images on Docker Hub.
+
+#### Pulling Images for CentOS, Ubuntu Desktop/Server, and Kali
+- **Pulling CentOS Image:**
+'''
+docker pull centos
+'''
+
+- **Pulling Ubuntu Desktop/Server  Image:**
+'''
+docker pull ubuntu
+'''
+
+- **Pulling Kali Linux Image:**
+'''
+docker pull kalilinux/kali-rolling
+'''
+
+#### Verifying the images are pulled successfully
+To verify that the images have been pulled correctly, list all downloaded Docker images:
+'''
+docker images
+'''
+
+You should see the CentOS, Ubuntu, and Kali Linux images listed among your downloaded images.
 
 ### F. Running Containers
 Running a CentOS container.
