@@ -2,6 +2,15 @@
 **HOW TO DOWNLOAD AND INSTALL DOCKER ON WINDOWS**
 I. Complete Documentation of Download, Installation, and Configuration
 
+
+## Team Members
+Ivan the-not-so-Terrible
+
+
+
+
+
+
 ## Outline
 
 Complete and thorough documentation of all your steps taken to successfully complete download, installation, and configuration.
@@ -53,9 +62,39 @@ Installing software.
 Navigating the filesystem.
 
 ### H. Docker Management Commands
-Listing running containers.
-Stopping and starting containers.
-Removing containers and images.
+$  docker build -t welcome-to-docker .
+	tell Docker to package the application
+	-t flag tags your image with the name ‘welcome-to-docker’. This tag identifies it.
+	.  tells Docker to find our file in the current working directory
+
+$  docker images
+	show all images on this computer, and 5 detail columns. Runs globally from any directory. The columns are:
+    * REPOSITORY  :  the name of the image. Is often the name of the directory the files are located in.  (Ex:  ubuntu-image)
+    * TAG  :  the tag is the version of the image.  (Ex:  latest)
+    * IMAGE ID  :  a unique identifier for each image.  (Ex:  91ecc778ac05)
+    * CREATED  :  how long ago the image was created.  (Ex:  15 hours ago)
+    * SIZE  :  the size of the image  (Ex:  139MB)
+
+$  docker run <REPOSITORY_NAME>
+	start a new Docker container from the image.  (Ex:  docker run hello-docker)
+
+$  docker ps --all
+	list all running Docker containers. Similar to listing running processes in Unix terminal.
+
+$  docker stop <CONTAINER_ID>
+	stop a running Docker container.  (Ex:  docker stop 91ecc778ac05)
+
+$  docker rm <OPTION> <CONTAINER_ID>
+	remove a Docker container. Options:
+* -v or --volumes  :  also remove its volumes.  (Ex:  docker rm -v 91ecc778ac05)
+* -f or --force  :  force remove if container is currently running.  (Ex:  docker rm -f 91ecc778ac05)
+
+$  docker search <IMAGE_NAME>
+	search for images in Docker Hub.  (Ex:  docker search ubuntu)
+
+$  docker pull <IMAGE_NAME> <TAG>
+	pulls the specified image from Docker Hub. Ommitting the tag pulls latest. (Ex:  docker pull neurodebian)
+
 
 ### I. Troubleshooting Common Issues
 Docker daemon not starting.
