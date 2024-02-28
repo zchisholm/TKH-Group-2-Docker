@@ -16,7 +16,14 @@ Navigating to the official Docker website.
 Downloading the Docker installer for the chosen platform.
 
 ### C. Installing Docker
-Running the Docker installer.
+To download Docker desktop, click the link https://www.docker.com/
+In the top left corner, go to the "Products" drop down button and click on "Docker Desktop"
+Download either the Mac/Windows version by clicking the link and saving it 
+Once software is downloaded, open Docker desktop
+Accept "Docker Subscription Service Agreement"
+Choose the "recommended settings" and click "Finish"
+Access your terminal and enter command "docker version"
+
 Following on-screen instructions to complete the installation.
 Windows/Mac: Using Docker Desktop.
 Linux: Installing Docker Engine.
