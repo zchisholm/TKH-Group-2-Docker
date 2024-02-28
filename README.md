@@ -1,5 +1,5 @@
 ## TKH-Group-2-Docker
-> _Authors: Zedd Chisholm, Shantericka Greene_
+> _Authors: Ivan Castillo, Zedd Chisholm, Shantericka Greene_
 
 
 # HOW TO DOWNLOAD AND INSTALL DOCKER ON WINDOWS
@@ -131,38 +131,71 @@ Navigating the filesystem.
 
 
 ### H. Docker Management Commands
+**Package Application**
+Tell Docker to package the application
+```bash
 $  docker build -t welcome-to-docker .
-	tell Docker to package the application
-	-t flag tags your image with the name ‘welcome-to-docker’. This tag identifies it.
-	.  tells Docker to find our file in the current working directory
+```
+- `-t` flag tags your image with the name ‘welcome-to-docker’. This tag identifies it.
+- `.`  tells Docker to find our file in the current working directory
 
+**Show Images**
+Show all image on this computer, and 5 detail columns. Runs globally from any directory.
+```bash
 $  docker images
-	show all images on this computer, and 5 detail columns. Runs globally from any directory. The columns are:
-    * REPOSITORY  :  the name of the image. Is often the name of the directory the files are located in.  (Ex:  ubuntu-image)
-    * TAG  :  the tag is the version of the image.  (Ex:  latest)
-    * IMAGE ID  :  a unique identifier for each image.  (Ex:  91ecc778ac05)
-    * CREATED  :  how long ago the image was created.  (Ex:  15 hours ago)
-    * SIZE  :  the size of the image  (Ex:  139MB)
+```
+The columns are:
+- REPOSITORY  :  the name of the image. Is often the name of the directory the files are located in.  (Ex:  ubuntu-image)
+- TAG  :  the tag is the version of the image.  (Ex:  latest)
+- IMAGE ID  :  a unique identifier for each image.  (Ex:  91ecc778ac05)
+- CREATED  :  how long ago the image was created.  (Ex:  15 hours ago)
+- SIZE  :  the size of the image  (Ex:  139MB)
 
+**Run an Image**
+
+Start a new Docker container from the image.
+```
 $  docker run <REPOSITORY_NAME>
-	start a new Docker container from the image.  (Ex:  docker run hello-docker)
+```
 
+**List Running Containers**
+
+List all running Docker containers. Similar to listing running processes in Unix terminal.
+```
 $  docker ps --all
-	list all running Docker containers. Similar to listing running processes in Unix terminal.
+```
+	
+**Stop a Container**
 
+Stop a running Docker container.  (Ex:  docker stop 91ecc778ac05)
+```
 $  docker stop <CONTAINER_ID>
-	stop a running Docker container.  (Ex:  docker stop 91ecc778ac05)
+```
 
+**Remove a Container**
+
+Remove a Docker container.	
+```
 $  docker rm <OPTION> <CONTAINER_ID>
-	remove a Docker container. Options:
-* -v or --volumes  :  also remove its volumes.  (Ex:  docker rm -v 91ecc778ac05)
-* -f or --force  :  force remove if container is currently running.  (Ex:  docker rm -f 91ecc778ac05)
+```
+    Options:
+        - -v or --volumes  :  also remove its volumes.  (Ex:  docker rm -v 91ecc778ac05)
+        - -f or --force  :  force remove if container is currently running.  (Ex:  docker rm -f 91ecc778ac05)
 
+**Search for Images**
+
+Search for images in Docker Hub. (Ex:  docker search ubuntu)
+```
 $  docker search <IMAGE_NAME>
-	search for images in Docker Hub.  (Ex:  docker search ubuntu)
+```
 
+**Pull an Image**
+
+Pulls the specified image from Docker Hub. Ommitting the tag pulls latest. (Ex:  docker pull neurodebian)
+```
 $  docker pull <IMAGE_NAME> <TAG>
-	pulls the specified image from Docker Hub. Ommitting the tag pulls latest. (Ex:  docker pull neurodebian)
+```
+	
 
 
 
