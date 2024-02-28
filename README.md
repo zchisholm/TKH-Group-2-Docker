@@ -8,30 +8,31 @@ I. Complete Documentation of Download, Installation, and Configuration
 
 ## A. Introduction
 
-Purpose of the documentation. 
+**Purpose of the documentation**
+
 The purpose of this documentation is to successfully download Docker for Windows/macOS
 Overview of Docker and its significance.
 Docker is a platform that allows you to packages, distribute, and run applications in a containerized environment, making it easier to deploy and manage applications across different environments.
+
 ## B. Downloading Docker
-Choosing the correct Docker version for your system (Desktop/Cloud).
+**Choosing the correct Docker version for your system (Desktop/Cloud)**
+
 When choosing the correct Docker version for your system, it is important to consider the following factors: compatibility, system requirements, support and documentation, cloud, and stability versus cutting edge features.
-Choosing the correct Docker version for your system (Desktop/Cloud).
-Navigating to the official Docker website.
-Open a web browser on your computer or mobile device. Type in the following URL https://www.docker.com/ Press Enter/Return on your keyboard to go to the Docker website. Once you're on the Docker website you can explore the various sections.
+
+**Navigating to the official Docker website.**
+
 Downloading the Docker installer for the chosen platform.
 Ensure you click on the download link for chosen platform (e.g., Windows, macOS, Linux).
 
-
-
-### C. Installing Docker
-To download Docker desktop, click the link https://www.docker.com/
-In the top left corner, go to the "Products" drop down button and click on "Docker Desktop"
-Download either the Mac/Windows version by clicking the link and saving it 
-Once software is downloaded, open Docker desktop
-Accept "Docker Subscription Service Agreement"
-Choose the "recommended settings" and click "Finish"
-Access your terminal and enter command "docker version"
-
+## C. Installing Docker
+**To download Docker desktop:**
+1. click the link https://www.docker.com/
+2. In the top left corner, go to the "Products" drop down button and click on "Docker Desktop"
+3. Download either the Mac/Windows version by clicking the link and saving it 
+4. Once software is downloaded, open Docker desktop
+5. Accept "Docker Subscription Service Agreement"
+6. Choose the "recommended settings" and click "Finish"
+7. Access your terminal and enter command "docker version"
 
 Following on-screen instructions to complete the installation.
 Windows/Mac: Using Docker Desktop.
@@ -170,7 +171,7 @@ Updating package lists.
 Installing software.
 Navigating the filesystem.
 
-### H. Docker Management Commands
+## H. Docker Management Commands
 
 **Package Application**
 Tell Docker to package the application
