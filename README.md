@@ -25,10 +25,44 @@ Opening a terminal or command prompt.
 Running docker --version to check the installed version.
 
 ### D. Configuring Docker (Post-Installation Steps)
-Setting up Docker to start on boot (if required).
-Adjusting Docker's resource allocation (optional).
-Configuring Docker for use without sudo (Linux specific).
+#### Setting up Docker to Start on Boot (if required)
+To ensure Docker runs automatically at system startup:
 
+- **For Linux:**
+  ```bash
+  sudo systemctl enable docker
+
+- **For Windows:**
+  Docker Desktop will start automatically by default. You can adjust this setting in Docker Desktop's General settings.
+
+- **For Windows:**
+  Similar to Windows, Docker Desktop will automatically start. This can be adjusted in the Docker Desktop's Preferences.
+
+#### Adjusting Docker's resource allocation (optional).
+- **Docker Desktop:**
+  Go to Settings (or Preferences on macOS) > Resources to adjust CPUs, Memory, Swap, and Disk Image size as per your requirement.
+
+- **For Docker Engine on Linux:** 
+  Edit the /etc/docker/daemon.json file and restart Docker to apply changes:
+  '''
+  {
+    "resources": {
+      "cpus": "2",
+      "memory": "4g"
+    }
+  }
+  '''
+
+#### Configuring Docker for use without sudo (Linux specific).
+To run Docker commands without sudo:
+
+    1. Add your user to the docker group:
+    '''
+    sudo usermod -aG docker $USER
+    '''
+
+    2. Log out and log back in for the group changes to take effect.
+    
 ### E. Pulling Container Images
 Accessing Docker Hub from the command line.
 Pulling images for CentOS, Ubuntu Desktop/Server, and Kali.
