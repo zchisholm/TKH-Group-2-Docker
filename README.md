@@ -1,5 +1,5 @@
 ## TKH-Group-2-Docker
-> _Authors: Zedd Chisholm,_
+> _Authors: Zedd Chisholm, Shantericka Greene_
 
 # HOW TO DOWNLOAD AND INSTALL DOCKER ON WINDOWS
 I. Complete Documentation of Download, Installation, and Configuration
