@@ -111,10 +111,10 @@ docker run -it --name my_kali kalilinux/kali-rolling /bin/bash
 ```
 ### Explanation of Common Options Used in docker run
 
-    - `-d`: Run container in detached mode (in the background).
-    - `-it`: Allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
-    - `--name`: Assign a name to the container. If you don't specify a name, Docker will generate a random one for you.
-    - `/bin/bash`: Runs the Bash shell in the container, providing you with interactive shell access.
+- `-d`: Run container in detached mode (in the background).
+- `-it`: Allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+- `--name`: Assign a name to the container. If you don't specify a name, Docker will generate a random one for you.
+- `/bin/bash`: Runs the Bash shell in the container, providing you with interactive shell access.
 
 After running these commands, you will have active containers for CentOS, Ubuntu, and Kali Linux. You can interact with each container's shell, allowing you to execute commands within the container as if you were logged into a CentOS, Ubuntu, or Kali Linux system directly.
 
