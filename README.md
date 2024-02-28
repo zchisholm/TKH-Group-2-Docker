@@ -92,13 +92,33 @@ You should see the CentOS, Ubuntu, and Kali Linux images listed among your downl
 ![Screenshot of a 'docker images' command results with the three images in yellow.](/assets/images/Docker-Images-CMD.jpg)
 
 ## F. Running Containers
-Running a CentOS container.
-Command to initiate and access the container.
-Running an Ubuntu Desktop/Server container.
-Command to initiate and access the container.
-Running a Kali container.
-Command to initiate and access the container.
-Explanation of common options used in docker run (e.g., -d, -it, --name).
+### Running a CentOS Container
+To run a CentOS container and access its shell:
+```bash
+docker run -it --name my_centos centos /bin/bash
+```
+
+### Running an Ubuntu Desktop/Server Container
+To run an Ubuntu container and access its shell:
+```bash
+docker run -it --name my_ubuntu ubuntu /bin/bash
+```
+
+### Running a Kali Container
+To run a Kali Linux container and access its shell:
+```bash
+docker run -it --name my_kali kalilinux/kali-rolling /bin/bash
+```
+### Explanation of Common Options Used in docker run
+
+    - `-d`: Run container in detached mode (in the background).
+    - `-it`: Allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+    - `--name`: Assign a name to the container. If you don't specify a name, Docker will generate a random one for you.
+    - `/bin/bash`: Runs the Bash shell in the container, providing you with interactive shell access.
+
+After running these commands, you will have active containers for CentOS, Ubuntu, and Kali Linux. You can interact with each container's shell, allowing you to execute commands within the container as if you were logged into a CentOS, Ubuntu, or Kali Linux system directly.
+
+Remember, when you are finished with a container, you can exit the bash shell by typing exit. This will stop the container. You can restart it anytime with docker start <container_name> and attach to it again using docker attach <container_name> or docker exec -it <container_name> /bin/bash for a new shell session.
 
 ## G. Verifying Container Functionality
 Accessing each container via terminal or SSH (if applicable).
