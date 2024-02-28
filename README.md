@@ -1,5 +1,6 @@
 ## TKH-Group-2-Docker
-> _Authors: Zedd Chisholm, Shantericka Greene_
+> _Authors: Ivan Castillo, Zedd Chisholm, Shantericka Greene_
+
 
 # HOW TO DOWNLOAD AND INSTALL DOCKER ON WINDOWS
 I. Complete Documentation of Download, Installation, and Configuration
@@ -92,13 +93,33 @@ You should see the CentOS, Ubuntu, and Kali Linux images listed among your downl
 ![Screenshot of a 'docker images' command results with the three images in yellow.](/assets/images/Docker-Images-CMD.jpg)
 
 ## F. Running Containers
-Running a CentOS container.
-Command to initiate and access the container.
-Running an Ubuntu Desktop/Server container.
-Command to initiate and access the container.
-Running a Kali container.
-Command to initiate and access the container.
-Explanation of common options used in docker run (e.g., -d, -it, --name).
+### Running a CentOS Container
+To run a CentOS container and access its shell:
+```bash
+docker run -it --name my_centos centos /bin/bash
+```
+
+### Running an Ubuntu Desktop/Server Container
+To run an Ubuntu container and access its shell:
+```bash
+docker run -it --name my_ubuntu ubuntu /bin/bash
+```
+
+### Running a Kali Container
+To run a Kali Linux container and access its shell:
+```bash
+docker run -it --name my_kali kalilinux/kali-rolling /bin/bash
+```
+### Explanation of Common Options Used in docker run
+
+- `-d`: Run container in detached mode (in the background).
+- `-it`: Allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+- `--name`: Assign a name to the container. If you don't specify a name, Docker will generate a random one for you.
+- `/bin/bash`: Runs the Bash shell in the container, providing you with interactive shell access.
+
+After running these commands, you will have active containers for CentOS, Ubuntu, and Kali Linux. You can interact with each container's shell, allowing you to execute commands within the container as if you were logged into a CentOS, Ubuntu, or Kali Linux system directly.
+
+Remember, when you are finished with a container, you can exit the bash shell by typing exit. This will stop the container. You can restart it anytime with docker start <container_name> and attach to it again using docker attach <container_name> or docker exec -it <container_name> /bin/bash for a new shell session.
 
 ## G. Verifying Container Functionality
 Accessing each container via terminal or SSH (if applicable).
@@ -107,10 +128,76 @@ Updating package lists.
 Installing software.
 Navigating the filesystem.
 
-## H. Docker Management Commands
-Listing running containers.
-Stopping and starting containers.
-Removing containers and images.
+
+
+### H. Docker Management Commands
+**Package Application**
+Tell Docker to package the application
+```bash
+$  docker build -t welcome-to-docker .
+```
+- `-t` flag tags your image with the name ‘welcome-to-docker’. This tag identifies it.
+- `.`  tells Docker to find our file in the current working directory
+
+**Show Images**
+Show all image on this computer, and 5 detail columns. Runs globally from any directory.
+```bash
+$  docker images
+```
+The columns are:
+- REPOSITORY  :  the name of the image. Is often the name of the directory the files are located in.  (Ex:  ubuntu-image)
+- TAG  :  the tag is the version of the image.  (Ex:  latest)
+- IMAGE ID  :  a unique identifier for each image.  (Ex:  91ecc778ac05)
+- CREATED  :  how long ago the image was created.  (Ex:  15 hours ago)
+- SIZE  :  the size of the image  (Ex:  139MB)
+
+**Run an Image**
+
+Start a new Docker container from the image.
+```
+$  docker run <REPOSITORY_NAME>
+```
+
+**List Running Containers**
+
+List all running Docker containers. Similar to listing running processes in Unix terminal.
+```
+$  docker ps --all
+```
+	
+**Stop a Container**
+
+Stop a running Docker container.  (Ex:  docker stop 91ecc778ac05)
+```
+$  docker stop <CONTAINER_ID>
+```
+
+**Remove a Container**
+
+Remove a Docker container.	
+```
+$  docker rm <OPTION> <CONTAINER_ID>
+```
+    Options:
+        - -v or --volumes  :  also remove its volumes.  (Ex:  docker rm -v 91ecc778ac05)
+        - -f or --force  :  force remove if container is currently running.  (Ex:  docker rm -f 91ecc778ac05)
+
+**Search for Images**
+
+Search for images in Docker Hub. (Ex:  docker search ubuntu)
+```
+$  docker search <IMAGE_NAME>
+```
+
+**Pull an Image**
+
+Pulls the specified image from Docker Hub. Ommitting the tag pulls latest. (Ex:  docker pull neurodebian)
+```
+$  docker pull <IMAGE_NAME> <TAG>
+```
+	
+
+
 
 ## I. Troubleshooting Common Issues
 Docker daemon not starting.
