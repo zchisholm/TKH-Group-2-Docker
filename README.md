@@ -8,14 +8,18 @@ I. Complete Documentation of Download, Installation, and Configuration
 
 ## A. Introduction
 
-Purpose of the documentation.
+Purpose of the documentation. 
+The purpose of this documentation is to successfully download Docker for Windows/macOS
 Overview of Docker and its significance.
-
+Docker is a platform that allows you to packages, distribute, and run applications in a containerized environment, making it easier to deploy and manage applications across different environments.
 ## B. Downloading Docker
-
+Choosing the correct Docker version for your system (Desktop/Cloud).
+When choosing the correct Docker version for your system, it is important to consider the following factors: compatibility, system requirements, support and documentation, cloud, and stability versus cutting edge features.
 Choosing the correct Docker version for your system (Desktop/Cloud).
 Navigating to the official Docker website.
+Open a web browser on your computer or mobile device. Type in the following URL https://www.docker.com/ Press Enter/Return on your keyboard to go to the Docker website. Once you're on the Docker website you can explore the various sections.
 Downloading the Docker installer for the chosen platform.
+Ensure you click on the download link for chosen platform (e.g., Windows, macOS, Linux).
 
 ## C. Installing Docker
 
