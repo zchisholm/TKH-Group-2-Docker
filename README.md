@@ -11,10 +11,13 @@ I. Complete Documentation of Download, Installation, and Configuration
 **Purpose of the documentation**
 
 The purpose of this documentation is to successfully download Docker for Windows/macOS
-Overview of Docker and its significance.
+
+**Overview of Docker and its significance**
+
 Docker is a platform that allows you to packages, distribute, and run applications in a containerized environment, making it easier to deploy and manage applications across different environments.
 
 ## B. Downloading Docker
+
 **Choosing the correct Docker version for your system (Desktop/Cloud)**
 
 When choosing the correct Docker version for your system, it is important to consider the following factors: compatibility, system requirements, support and documentation, cloud, and stability versus cutting edge features.
@@ -25,14 +28,22 @@ Downloading the Docker installer for the chosen platform.
 Ensure you click on the download link for chosen platform (e.g., Windows, macOS, Linux).
 
 ## C. Installing Docker
+
 **To download Docker desktop:**
-1. click the link https://www.docker.com/
+
+1. Click the link https://www.docker.com/
 2. In the top left corner, go to the "Products" drop down button and click on "Docker Desktop"
-3. Download either the Mac/Windows version by clicking the link and saving it 
+3. Download either the Mac/Windows version by clicking the link and saving it
+
+    ![Group Banner](/assets/images/TKH-Group-2-Docker-Website-02.jpg)
+
 4. Once software is downloaded, open Docker desktop
 5. Accept "Docker Subscription Service Agreement"
 6. Choose the "recommended settings" and click "Finish"
-7. Access your terminal and enter command "docker version"
+7. Access your terminal and enter command:
+    ```bash
+    docker --version
+    ```
 
 Following on-screen instructions to complete the installation.
 Windows/Mac: Using Docker Desktop.
@@ -165,11 +176,15 @@ Remember, when you are finished with a container, you can exit the bash shell by
 
 ## G. Verifying Container Functionality
 
-Accessing each container via terminal or SSH (if applicable).
-Performing basic operations inside the containers to ensure they are running correctly.
-Updating package lists.
-Installing software.
-Navigating the filesystem.
+After successfully running your CentOS, Ubuntu, and Kali containers, it's crucial to verify that they are functioning as expected. This section guides you through accessing each container, performing basic operations, updating package lists, installing software, and navigating the filesystem.
+
+### Accessing each container via terminal or SSH
+To access a running container via terminal, use the `docker exec` command. This command allows you to run a command in a running container. For interactive shell access, use:
+
+### Performing basic operations
+**Updating package lists.**
+**Installing software**
+**Navigating the filesystem**
 
 ## H. Docker Management Commands
 
@@ -255,6 +270,7 @@ $  docker pull <IMAGE_NAME> <TAG>
 ### Docker daemon not starting
 
 - **On Linux:**
+
   - Ensure the Docker service is enabled to start at boot:
     ```bash
     sudo systemctl enable docker
@@ -274,14 +290,15 @@ $  docker pull <IMAGE_NAME> <TAG>
   - Reinstall Docker Desktop if the issue persists, ensuring you download the latest
 
 ### Issues pulling images from Docker Hub
+
 - Ensure you have a stable internet connection.
 - Check if Docker Hub is experiencing downtime or operational issues by visiting their status page.
 - If you're behind a proxy, configure Docker to use the proxy settings:
   - On Docker Desktop, you can set this in the network settings.
   - On Linux, configure the proxy settings in the Docker daemon configuration file.
 
-
 ### Containers exiting immediately after starting
+
 - Containers usually exit immediately if the main process fails to start or encounters an error. To diagnose:
   - Check the container logs:
     ```bash
@@ -291,5 +308,13 @@ $  docker pull <IMAGE_NAME> <TAG>
   - Some applications require a foreground process. Ensure your Dockerfile CMD or ENTRYPOINT instructions are correctly configured to keep the container running.
 
 ## J. Conclusion
-Summary of the tasks accomplished.
-Reflection on the learning process and the utility of Docker.
+
+Throughout this quick guide, we've covered the essential steps to get started with Docker, from installation and configuration to running containers. We've also shared some common troubleshooting tips.
+
+It's clear that Docker simplifies the deployment and management of applications by containerizing them. This enhances consistency across multiple development, testing, and production environments and also makes it easier to scale/distribute software.
+
+The utility of Docker in today's technology landscape cannot be overstated. By following this guide, you've taken a big step towards leveraging Docker's power and flexibility.
+
+Docker has much more to explore, including orchestration with Kubernetes, multi-container applications, and optimizing Dockerfiles for production. Keep experimenting, keep learning, and take advantage of the internet and YouTube University to deepen your understanding of Docker.
+
+
