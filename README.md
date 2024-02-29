@@ -1,6 +1,6 @@
 # HOW TO DOWNLOAD AND INSTALL DOCKER ON WINDOWS
 
-> _Authors: Ivan Castillo, Zedd Chisholm, Shantericka Greene_
+> _Authors: Ivan Castillo, Zedd Chisholm, Shantericka Greene, Jaelin Lazberry, Luz Ritacco, Pedro Gomez_
 
 ![Group Banner](/assets/images/TKH-Group-2-Docker-Doc-Banner.jpg)
 
