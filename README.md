@@ -179,7 +179,14 @@ Remember, when you are finished with a container, you can exit the bash shell by
 After successfully running your CentOS, Ubuntu, and Kali containers, it's crucial to verify that they are functioning as expected. This section guides you through accessing each container, performing basic operations, updating package lists, installing software, and navigating the filesystem.
 
 ### Accessing each container via terminal or SSH
-To access a running container via terminal, use the `docker exec` command. This command allows you to run a command in a running container. For interactive shell access, use:
+
+To interact with a running container through the terminal, you can use the docker exec command. This command permits you to execute a command inside a running container. For obtaining interactive shell access, the command format is as follows:
+
+```bash
+docker exec -it <container_name_or_id> /bin/bash
+```
+
+For containers that might not use Bash as their default shell (like Alpine Linux, which uses /bin/sh), you may need to adjust the command accordingly. Replace <container_name_or_id> with the actual name or ID of your container.
 
 ### Performing basic operations
 **Updating package lists.**
