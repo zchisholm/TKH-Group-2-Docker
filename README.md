@@ -189,13 +189,46 @@ docker exec -it <container_name_or_id> /bin/bash
 For containers that might not use Bash as their default shell (like Alpine Linux, which uses /bin/sh), you may need to adjust the command accordingly. Replace <container_name_or_id> with the actual name or ID of your container.
 
 ### Performing basic operations
+
 **Updating package lists.**
+
+It's a good practice to update the package lists in your container to ensure you have the latest repository information. Depending on the Linux distribution running in your container, you can use one of the following commands:
+- For CentOS:
+  - ```bash
+    yum update -y
+    ```
+  This command updates the list of available packages and their versions, but it does not install or upgrade any packages.
+
+- For Ubuntu and Kali Linux:
+  - ```bash
+    apt-get update
+    ```
+  Similar to the yum command, this updates the list of available packages without installing or upgrading them.
+
 **Installing software**
+
+To test the package management system further, you can try installing a package. Here's how to install curl, a command-line tool for transferring data with URLs:
+- For CentOS:
+  - ```bash
+    yum install -y curl
+    ```
+
+- For Ubuntu and Kali Linux:
+  - ```bash
+    apt-get install -y curl
+    ```
+
 **Navigating the filesystem**
+
+Explore the filesystem of your container using common shell commands:
+- Use ls to list the contents of the current directory.
+- Change directories with cd <directory_name>.
+- Create a new directory using mkdir <new_directory_name>.
 
 ## H. Docker Management Commands
 
 **Package Application**
+
 Tell Docker to package the application
 
 ```bash
@@ -206,6 +239,7 @@ $  docker build -t welcome-to-docker .
 - `.` tells Docker to find our file in the current working directory
 
 **Show Images**
+
 Show all image on this computer, and 5 detail columns. Runs globally from any directory.
 
 ```bash
